@@ -10,7 +10,6 @@ int main()
 {
     int mes;
     float rendimento, impostoDevido = 0;
-    float valorCalculoAliquota;
 
     // Porcentagem de imposto cobrado para cada faixa de rendimento
     float valorAliquotaFaixa2 = 0.075,
