@@ -1,0 +1,13 @@
+Soluções que necessitam de vetores para uma solução elegante:
+
+a) Apesar duma variante deste problema ter sido feita nas listas anteriores,
+o uso de vetores é necessário nesta versão para que os valores dentro da faixa
+possam ser impressos. Na variante feita anteriormente, apenas o menor e o maior
+valor eram impressos, além da quantidade de valores dentro da faixa.
+Seria possível, porém, imprimir o valor no exato momento em que é lido (antes
+da variável ser reescrita no próximo loop). Contudo, como se trata de uma solução
+elegante, defendo o uso de vetores.
+
+c) Para ordenar os n números, primeiro é necessário armazená-los em um vetor na
+ordem em que foram recebidos, para então aplicar algum algorítmo de ordenação.
+
