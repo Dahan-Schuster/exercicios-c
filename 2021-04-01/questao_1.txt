@@ -1,0 +1,2 @@
+Linha 13 - alterar para: for (i = 3; i < numero; i += 2)
+Linha 22 - alterar para: int n_encontrados = 0;
