@@ -2,7 +2,6 @@
  * Função 1 *
  *************/
 
-
 #define KG 1000
 
 /**
@@ -92,31 +91,33 @@ unsigned char calculaParidade(unsigned char b)
      * Em cada iteração, compara o bit ativo em i com os bits de b,
      * sendo i a posição de cada bit. Ou seja, verifica índex a índex
      * se os bits de b estão ativos
-     * 
-     *  i | bitAtivoEmI
-     *  0 |  0000 0001
-     *  1 |  0000 0010
-     *  2 |  0000 0100
-     *  3 |  0000 1000
-    */    
+    */
     for (i = 0; i < 8; i++)
     {
-        // o operador << move o bit inicial (0001) i vezes para a esquerda
+        /**
+         * O operador << move o bit inicial (0001) i vezes para a esquerda
+         * i | bitAtivoEmI
+         * 0 |  0000 0001
+         * 1 |  0000 0010
+         * 2 |  0000 0100
+         * 3 |  0000 1000
+'        */
         bitAtivoEmI = BIT_INICIAL << i;
-        
-        // O operador & irá comparar os bits de b com o bit ativo em i, e
-        // retornar "true" (um valor != de zero que neste caso vale true)
-        // caso o bit ativo em i esteja ativo também b 
-        //
-        //      b     | bitAtivoEmI | b & bitAtivoEmI
-        //  0000 1000 |  0000 0001  |  0000 0000 == 0
-        //  0000 1000 |  0000 1000  |  0000 1000 == 8  
-        //  0101 0101 |  0001 0000  |  0001 0000 == 16
+
+        /**
+         * O operador & irá comparar os bits de b com o bit ativo em i, e
+         * retornar "true" (um valor != de zero que neste caso vale true)
+         * caso o bit ativo em i esteja ativo também b 
+         *
+         *      b     | bitAtivoEmI | b & bitAtivoEmI
+         *  0000 1000 |  0000 0001  |  0000 0000 == 0
+         *  0000 1000 |  0000 1000  |  0000 1000 == 8  
+         *  0101 0101 |  0001 0000  |  0001 0000 == 16
+         */
         if (b & bitAtivoEmI)
             bitsAtivos++;
     }
 
-    
     return bitsAtivos % 2 != 0;
 }
 
@@ -127,20 +128,14 @@ unsigned char calculaParidade(unsigned char b)
 /**
  * @author Dahan Schuster
  */
-unsigned int fourcc (char c1, char c2, char c3, char c4)
+unsigned int fourcc(char c1, char c2, char c3, char c4)
 {
+    /**
+     * Para concatenar os caracteres, é necessário multiplicar pelo
+     * equivalente hexadecimal múltiplo de 10 que "desloca" o char para
+     * a esquerda
+     * Ex.: D = 0x44 == 68; 0x100 == 268;
+     *      0x44 * 0x100 == 0x4400 == 17408
+     */
     return (c1 * 0x1) + (c2 * 0x100) + (c3 * 0x10000) + (c4 * 0x1000000);
-}
-
-
-/*************
- * Função Extra ???????? *
- *************/
-
-#include <stdio.h>
-int main()
-{
-    printf("%d\n", fourcc('D', 'I', 'V', 'X'));
-
-    return 0;
 }
