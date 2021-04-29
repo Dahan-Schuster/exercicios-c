@@ -42,3 +42,19 @@ void printVetor(int *v, char *nome, int tam)
 
     printf("}\n");
 }
+
+/**
+ * Imprime uma matriz
+ * 
+ * @author Dahan Schuster
+ */
+void printMatriz(int lins, int cols, int matriz[lins][cols])
+{
+    int i, j;
+    for (i = 0; i < lins; i++)
+    {
+        for (j = 0; j < cols; j++)
+            printf("%0d, ", matriz[i][j]);
+        printf("\n");
+    }
+}
