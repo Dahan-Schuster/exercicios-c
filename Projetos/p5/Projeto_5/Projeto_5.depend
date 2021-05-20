@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1621385915 source:/home/dahan/Documents/code/utfpr/CSF13/Projetos/p5/Projeto_5/main.c
+	<stdio.h>
+	<time.h>
+	<math.h>
+	"projeto5.h"
+	"gerador_de_testes.h"
+
+1621316670 /home/dahan/Documents/code/utfpr/CSF13/Projetos/p5/Projeto_5/projeto5.h
+	"imagem.h"
+
+1621376193 /home/dahan/Documents/code/utfpr/CSF13/Projetos/p5/Projeto_5/imagem.h
+
+1621376196 /home/dahan/Documents/code/utfpr/CSF13/Projetos/p5/Projeto_5/gerador_de_testes.h
+	"imagem.h"
+	"projeto5.h"
+
+1621316670 source:/home/dahan/Documents/code/utfpr/CSF13/Projetos/p5/Projeto_5/gerador_de_testes.c
+	<stdlib.h>
+	<math.h>
+	"gerador_de_testes.h"
+
+1621376195 source:/home/dahan/Documents/code/utfpr/CSF13/Projetos/p5/Projeto_5/imagem.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"imagem.h"
+
+1621385653 source:/home/dahan/Documents/code/utfpr/CSF13/Projetos/p5/Projeto_5/projeto5.c
+	<stdio.h>
+	<math.h>
+	"imagem.h"
+	"projeto5.h"
+
